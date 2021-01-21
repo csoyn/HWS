@@ -12,7 +12,9 @@
 
 ```python
 def my_abs(x):
+    
     if type(x) == float or type(x) == int :
+        
         if x>0:
             return x
         elif x == -0.0 or x == +0.0 or x == 0.0 :
@@ -20,8 +22,10 @@ def my_abs(x):
             return x
         else:
             return -x
+        
     elif type(x) == complex:
             return ((x.real)**2 + (x.imag)**2 )**0.5
+        
     else:
         pass
     
@@ -47,11 +51,14 @@ print(my_abs(0.0))
 
 ```python
 def my_all(elemets):
+    
     for e in elemets:
+        
         if not e:
             return False
         else:
-             return True       
+             return True     
+            
     return True
 
 print(my_all([]))
@@ -73,9 +80,11 @@ print(all([]), all([1, 2, 5, '6']), all([[], 2, 5, '6']))
 
 ```python
 def my_any(elemets):
+    
     for e in elemets:
         if e:
             return True
+        
     return False
 
 print(my_any([1, 2, 5, '6']))

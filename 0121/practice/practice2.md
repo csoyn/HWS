@@ -24,6 +24,7 @@ def snail(height, day, night, time=0):
     
     if will_move % moved ==0: # 100에  도달했으면
         time = will_move // moved # 이만큼 걸림
+        
     else: # 모질라면
         time = will_move // moved +1 #97//3+1 (32+1)
         return time
@@ -41,6 +42,7 @@ def snail(height, day, night, time=0):
 
 ```python
 def sum_of_digit(number, s=0):
+    
     for i in str(number): 
         s += int(i) 
     return s
