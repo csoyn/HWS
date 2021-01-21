@@ -20,7 +20,7 @@ False, None, True, and, as, assert, async, await, break, class, continue, def, d
 
 
 
-### 2. 실수 비교
+## 2. 실수 비교
 
 > python은 부동소수점 방식을 이용하여 실수(float)를 표현하는 과정에서, 나타내고자 하는 값과의 오차가 발생하여 원하는 대로 연산 또는 비교가 되지 않을 때가 있다. 이를 참고하여, 아래와 같은 두 실수 값을 올바르게 비교하기 위한 코드를 작성하시오.
 
@@ -33,21 +33,24 @@ num2 = 0.3
 먼저 두 개의 값을 비교해보면,
 
 ```python
-num1 == num2 # False
+num1 == num2
+False
 ```
 
 **Solution 2.1**
 
 ```python
 num1_r = round(num1,2)
-num1_r ==num2 # True
+num1_r ==num2
+True
 ```
 
 **Solution 2.2**
 
 ```python
 import sys
-abs(num1-num2) <=sys.float_info.epsilon # True
+abs(num1-num2) <=sys.float_info.epsilon
+True
 ```
 
 
@@ -71,15 +74,14 @@ abs(num1-num2) <=sys.float_info.epsilon # True
 
 > “안녕, 철수야"를 string interpolation을 사용하여 출력하시오.
 
-**Solution4 **
+**Solution4**
 
-`"큰 따옴표"`를 출력하기 위해서는 `'작은따옴표' `안에` "큰 따옴표"`를 넣어야한다.
+name = '철수'
 
 ```python
-name = '철수'
 print(f'"안녕, {name}야"')
 print ('"안녕, {}야"'.format(name))
-print('"안녕, %s야"' %name) # 옛날방식...
+print('"안녕, %s야"' %name)
 ```
 
 
@@ -98,11 +100,10 @@ int('3.5') # (5)
 
 **Solution5**
 
-(5번) 3.5가 실수형이 아닌 문자열이므로 정수로 변환 불가 
-
 ```python
 # 아래에 답안을 작성하시오.
-int(3.5) #얘는 가능
+# (5번) 3.5가 실수형이 아닌 문자열이므로 정수로 변환 불가 
+# int(3.5) 얘는 가능
 ```
 
 
@@ -156,7 +157,9 @@ print('''
 
 ## 8. 근의 공식
 
->  이차 방정식의 근을 찾는 수식을 파이썬 코드로 작성하시오.
+> 다음은 이차 방정식의 근을 찾는 수식이다. 이를 파이썬 코드로 작성하시오.
+
+![image](hws0118.assets/87770068-7774a880-c859-11ea-8433-7be4ad1fa4e4.png)
 
 **Solution8**
 
