@@ -10,9 +10,18 @@
 
 **Solution1**
 
-- `tuple` `range` `set` : 수정 불가능한 immutable
+- `tuple` `range`  `set`: 수정 불가능한 immutable
 
-- `string` `list` `dict` : 수정 가능한 mutable
+- `string`  `list` `dict` : 수정 가능한 mutable
+
+
+
+**Real Solution1**
+
+> 0121 추가
+
+- `tuple` `range`  `string`: 수정 불가능한 immutable
+- `set`  `list` `dict` : 수정(요소변경가능) 가능한 mutable
 
 
 
@@ -24,7 +33,8 @@ range와 slicing을 활용하여 1부터 50까지 숫자 중 홀수로 이루어
 
 ```python
 list1 = list(range(1,51)) # 1 부터 50까지
-odd_list1 = list1[0::2] # 1(인덱스0) 부터 끝까지 2씩 증가시킴
+odd_list1 = list1[0::2] # 1(인덱스0) 부터 끝까지 2씩 증가시킴 
+#(추가)슬리이싱 스타트가 0이면 생략가능 & [0:-1:2] 
 print(odd_list1)
 ```
 
@@ -98,7 +108,17 @@ print(sum(scores) / len(scores))
 
 
 
+**Solution6.2** _ 인덱스 활용(0121추가)
 
+```python
+scores = [80, 89, 99, 83]
+len_list = len(scores) 
+tot = 0
+for score in scores:
+    tot += score
+
+print(tot/len_list)   
+```
 
 
 
