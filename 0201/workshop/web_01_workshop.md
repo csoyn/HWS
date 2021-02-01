@@ -97,6 +97,6 @@ my_photo.png를 보여주는 <img> tag를 작성하시오.
   </div>
 ```
 
- `p:nth-child(2)`는 모든 것에서 두 번 째에 적용
+ `p:nth-child(2)`: 2번째 자식이p라면 적용
 
-`p:nth-of-type(2)`는  (p) 엘리먼트중 2번째에 적용
+`p:nth-of-type(2)`는  (p) 엘리먼트중 2번째에 적용 - 두번 째 p에 적용
