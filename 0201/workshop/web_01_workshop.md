@@ -62,9 +62,6 @@ my_photo.png를 보여주는 <img> tag를 작성하시오.
 </head>
 
 <body>
-  <!-- 이것은 주석입니다. -->
-  <!-- <span>이것은 인라인요소</span> -->
-  <!-- <a href="https://www.naver.com">네이버로 이동!!</a> -->
   <div id = "ssafy">
     <h2>어떻게 선택 될까?</h2>
     <p>첫번째 단락</p>
