@@ -1,0 +1,17 @@
+/* 아래에 코드를 작성하시오. */
+.container {
+  height: 700px;
+  background-color: rgb(10, 10, 10);
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  height: 700px;
+}
+.img1{
+  
+  height: 100px;
+
+}
