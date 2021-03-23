@@ -21,12 +21,12 @@ from django.contrib.auth import update_session_auth_hash
 @login_required
 def change_password(request):
     if request.method == 'POST':
-        # 순서가 변경 되어있고, update랑 다름..
+        # 순서중요. update랑 다름.
         form = PasswordChangeForm(request.user, request.POST)
         if form.is_valid():
             form.save()
-            # 세션을 유지 함 로그아웃 되지 않아
-            # 세션update
+            # 세션을 유지함 로그아웃 되지 않아
+            # 세션 update
             update_session_auth_hash(request, form.user)
             return redirect('articles:index')
     else:
