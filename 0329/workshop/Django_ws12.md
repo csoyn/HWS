@@ -10,7 +10,8 @@
 1) 대체한 User model 을 사용한다.
 
 ```python
-### models.py
+### accounts
+## models.py
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 # Create your models here.
@@ -29,7 +30,7 @@ AUTH_USER_MODEL = 'accounts.user'
 ```
 
 ```python
-### articles/views.py
+### models.py
 # user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
 class Article(models.Model):
@@ -47,6 +48,7 @@ class Comment(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
 ​```
+articles/views.py
 create 동작에 
 article.user = request.user
 comment.user = request.user 추가
