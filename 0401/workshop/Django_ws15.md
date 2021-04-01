@@ -42,7 +42,7 @@ class User(AbstractUser):
 
 ##### csoyn2 가 csoyn을 팔로우 할 때
 
-<img src="Django_ws15.assets/image-20210401145333892.png" alt="image-20210401145333892" style="zoom:80%;" />
+![image-20210401161948490](Django_ws15.assets/image-20210401161948490.png)
 
 ##### csoyn2 가 csoyn을 팔로우 하지 않을 때
 
