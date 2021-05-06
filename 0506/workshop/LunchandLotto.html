@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>점심메뉴 & 로또</title>
+</head>
+
+<body>
+  <div id='app'>
+    <h2>점심메뉴</h2>
+        <button @click='pickLunch'>Pick One</button>
+        <br>
+        {{ choiceMenu }}
+    <br>
+    <h2>로또</h2>
+    <button @click='getNums'>Get Lucky Numbers</button>
+    <br>
+    {{ choiceNums }}
+    <!-- <ul>
+        <li v-for= "num in choiceNums"> {{ num }}</li>
+    </ul> -->
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
+  <script>
+      const app= new Vue({
+          el: '#app',
+          data: {
+              lunch: ['김치찌개', '돈까스', '떡볶이', '국밥'],
+              choiceMenu: '',
+
+              sampleNums: [],
+              choiceNums: [],
+          },
+          methods: {
+              pickLunch: function () {
+                  this.choiceMenu = _.sample(this.lunch)
+              },
+              getNums: function () {
+                  const numbers = _.range(1, 45)
+                  this.sampleNums = _.sampleSize(numbers, 6)
+
+                  this.choiceNums = _.sortBy(this.sampleNums)
+              }
+          }
+
+      })
+  </script>
+</body>
+</html>
